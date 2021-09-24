@@ -145,9 +145,6 @@
           <li><a data-pjax href="https://bestmoneyone.github.io/bber">哔哔</a></li>
           
           
-        <li><a data-pjax href="https://bestmoneyone.github.io/friends">友链</a></li>
-
-        
         </ul>
       </div><!-- /.navbar-collapse -->
     </div><!-- /.container-fluid -->
@@ -258,7 +255,7 @@
                         src='https://bestmoneyone.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://bestmoneyone.github.io/images/avatar.png?v=1632474122336" class="avatar">
+            <img src="https://bestmoneyone.github.io/images/avatar.png?v=1632474496408" class="avatar">
         </div>
         <div class="sitename">最牛逼的项目站</div>
         <span class="description" data-text='["最赚钱的人"]'>&nbsp;</span>
@@ -273,7 +270,7 @@
         
         <div class="search">
             <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
-            <input type="text" class="search-input" placeholder="关键字搜索 ⚆_⚆ つ♡">
+            <input type="text" class="search-input" placeholder="关键字搜索 φ(゜▽゜*)♪">
             <div class="search-results"></div>
         </div>
         
@@ -286,6 +283,9 @@
         
         
         
+        
+        <a onclick="showWechat()"><i style="font-size: 20px;"><img class="icon"
+                    src="https://bestmoneyone.github.io/media/images/wechat.png" alt=""></i></a>
         
         
         
@@ -331,12 +331,6 @@
                 </a>
             </div>
         
-        
-        <div class="mchocie description">
-            <a data-pjax href="https://bestmoneyone.github.io/friends" class="menubutton" style="margin-right: 15px;">
-                <i><img class="icon menuicon" src="" alt="友人帐"></i>&nbsp;<span data-text="友人帐">友人帐</span>
-            </a>
-        </div>
         
         <!--  -->
     </div>
@@ -613,7 +607,7 @@
     }
 
     function showWechat() {
-        var wechat = '';
+        var wechat = 'https://t.me/GoldenKao';
         alert("博主微信号：" + wechat);
         return false;
     }
@@ -968,7 +962,7 @@ menulist.eq(i).show();
             
             <div class="postdetailimg">
                 
-                <img src="https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic.jj20.com%2Fup%2Fallimg%2F911%2F042516130027%2F160425130027-6.jpg&amp;refer=http%3A%2F%2Fpic.jj20.com&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1635064479&amp;t=06d0e7869e79dd979acc487477e947d9" class="postimage">
+                <img src="/media/images/postdefault.png" class="postimage">
                 
             </div>
             <div class="postinfo-detail">
@@ -1100,10 +1094,10 @@ menulist.eq(i).show();
     
 
     <!-- 背景图加载方式👇 -->
-    <div id="bgchoice" style="display: none">link
+    <div id="bgchoice" style="display: none">default
                 </div>
                 
-                <div id="bgurl" style="display:none">https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg5.51tietu.net%2Fpic%2F2019-082211%2Fa1cay32mmf2a1cay32mmf2.jpg&amp;refer=http%3A%2F%2Fimg5.51tietu.net&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1635064685&amp;t=eb75b36ff0274e25757dd16dbdc893ab</div>
+                <div id="bgurl" style="display:none">\media\images\custom-bgimage.jpg</div>
                 
     <!-- 背景图加载方式👆 -->
 </body>
@@ -1164,7 +1158,7 @@ menulist.eq(i).show();
 
 <!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 <script>
-    var bgchoice = "link"
+    var bgchoice = "default"
     var bg = $('#bg');
     var bgurl = document.getElementById("bgurl").innerHTML;
     if (bgchoice == 'default')
