@@ -1,15 +1,15 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bestmoneyone.github.io</id>
-    <title>BestMoneyOne</title>
-    <updated>2021-09-24T08:26:36.656Z</updated>
+    <title>最牛逼的项目站</title>
+    <updated>2021-09-24T08:44:41.858Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bestmoneyone.github.io"/>
     <link rel="self" href="https://bestmoneyone.github.io/atom.xml"/>
     <subtitle>最赚钱的人</subtitle>
     <logo>https://bestmoneyone.github.io/images/avatar.png</logo>
     <icon>https://bestmoneyone.github.io/favicon.ico</icon>
-    <rights>All rights reserved 2021, BestMoneyOne</rights>
+    <rights>All rights reserved 2021, 最牛逼的项目站</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
         <id>https://bestmoneyone.github.io/post/处女作/</id>

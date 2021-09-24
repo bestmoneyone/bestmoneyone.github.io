@@ -107,7 +107,7 @@ Gridea 主页
         <span class="icon-bar"></span>
         <span class="icon-bar"></span>
       </button>
-      <a data-pjax class="navbar-brand" href="https://bestmoneyone.github.io">BestMoneyOne&nbsp;&nbsp;|</a>
+      <a data-pjax class="navbar-brand" href="https://bestmoneyone.github.io">最牛逼的项目站&nbsp;&nbsp;|</a>
       <span class="navbar-brand mbapspan"><i id="mbaplayer" class="fa fa-play-circle-o" aria-hidden="true"
           style="font-size: 28px;top: 12px;position: absolute;" onclick="aplayerPlay();"></i></span>
     </div>
@@ -142,6 +142,8 @@ Gridea 主页
         
         
         
+          <li><a data-pjax href="https://bestmoneyone.github.io/bber">哔哔</a></li>
+          
           
         <li><a data-pjax href="https://bestmoneyone.github.io/friends">友链</a></li>
 
@@ -256,9 +258,9 @@ Gridea 主页
                         src='https://bestmoneyone.github.io/media/images/music.png' alt="音乐播放器" class="musicbtn"></i></a>
         </div>
         <div class="avatar-border">
-            <img src="https://bestmoneyone.github.io/images/avatar.png?v=1632471912171" class="avatar">
+            <img src="https://bestmoneyone.github.io/images/avatar.png?v=1632473069063" class="avatar">
         </div>
-        <div class="sitename">BestMoneyOne</div>
+        <div class="sitename">最牛逼的项目站</div>
         <span class="description" data-text='["最赚钱的人"]'>&nbsp;</span>
         <div class="siteinfocontainer">
             <span class="siteinfo">文章</span>
@@ -271,13 +273,16 @@ Gridea 主页
         
         <div class="search">
             <!-- <input type="text" class="search-input" placeholder="标题搜索(●'◡'●)" /> -->
-            <input type="text" class="search-input" placeholder="标题搜索 ⚆_⚆ つ♡">
+            <input type="text" class="search-input" placeholder="关键字搜索 ⚆_⚆ つ♡">
             <div class="search-results"></div>
         </div>
         
     <div class="share-button">
-        <span></span>
+        <span>请关注</span>
         
+        
+        <a onclick="showqq()"><i style="font-size: 20px;"><img class="icon"
+                    src="https://bestmoneyone.github.io/media/images/QQ.png" alt=""></i></a>
         
         
         
@@ -286,7 +291,7 @@ Gridea 主页
         
         
     </div>
-    <div id="qq" style="display:none"></div>
+    <div id="qq" style="display:none">876364202</div>
     <!------------ 加载菜单按钮👇 ------------------------->
     <div class="menucontainer">
         
@@ -319,6 +324,12 @@ Gridea 主页
         
 
         
+        
+            <div class="mchocie description">
+                <a data-pjax href="https://bestmoneyone.github.io/bber" class="menubutton" style="margin-right: 15px;">
+                    <i><img class="icon menuicon" src="" alt="哔哔"></i>&nbsp;<span data-text="哔哔">哔哔</span>
+                </a>
+            </div>
         
         
         <div class="mchocie description">
@@ -358,11 +369,25 @@ Gridea 主页
                 href="https://github.com/850552586/gridea-theme-fog">Fog</a>
             <div>
                 
+                <div id="sitegotimeDate">载入天数...</div>
+                <div id="sitegotimes">载入时分秒...</div>
+                <div id="cussitetime" style="display:none">02/22/2020</div>
+                
             </div>
             <div>
                 
+                <script async
+                    src="https://cdn.jsdelivr.net/gh/850552586/ericamcdn@0.1/js/busuanzi.pure.mini.js"></script>
+                <div id="vistornum" style="margin:0">
+                    <span id="busuanzi_container_site_uv">
+                        <i class="fa fa-heart" aria-hidden="true" style="color: red;"></i> 总访问量:<span
+                            id="busuanzi_value_site_pv"></span>&nbsp;&nbsp;|&nbsp;&nbsp;
+                        <i class="fa fa-user-o" aria-hidden="true"></i> 访问人数:<span id="busuanzi_value_site_uv"></span>
+                    </span>
+                </div>
+                
             </div>
-            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 鄂ICP备...号
+            <div class="copyright" style="color:white;text-align: center;">Copyright © 2020  备案号: 京ICP备...号
             </div>
         </div>
 
@@ -370,6 +395,38 @@ Gridea 主页
 
     </div>
 </body>
+
+<script>
+    //----------------------站点运行时间
+    var now = new Date();
+
+    function createtime() {
+        var sitegotime = document.getElementById("cussitetime").innerHTML + " 00:00:00";
+        var grt = new Date(sitegotime); //此处修改你的建站时间或者网站上线时间 
+        now.setTime(now.getTime() + 250);
+        days = (now - grt) / 1000 / 60 / 60 / 24;
+        dnum = Math.floor(days);
+        hours = (now - grt) / 1000 / 60 / 60 - (24 * dnum);
+        hnum = Math.floor(hours);
+        if (String(hnum).length == 1) {
+            hnum = "0" + hnum;
+        }
+        minutes = (now - grt) / 1000 / 60 - (24 * 60 * dnum) - (60 * hnum);
+        mnum = Math.floor(minutes);
+        if (String(mnum).length == 1) {
+            mnum = "0" + mnum;
+        }
+        seconds = (now - grt) / 1000 - (24 * 60 * 60 * dnum) - (60 * 60 * hnum) - (60 * mnum);
+        snum = Math.round(seconds);
+        if (String(snum).length == 1) {
+            snum = "0" + snum;
+        }
+        document.getElementById("sitegotimeDate").innerHTML = "本站已安全运行 " + dnum + " 天 ";
+        document.getElementById("sitegotimes").innerHTML = hnum + " 小时 " + mnum + " 分 " + snum + " 秒";
+    }
+
+    let intervalId = setInterval("createtime()", 250);
+</script>
 
     </div>
 
@@ -403,12 +460,12 @@ Gridea 主页
             $(".flycontainer").css("display","flex");
             $(".popup").fadeOut(500)
             await sleep(2000);
-            var sitename = "BestMoneyOne";
+            var sitename = "最牛逼的项目站";
             getFogUser(sitename);
         }
 
         function fog_goregis(){
-            var sitename = "BestMoneyOne";
+            var sitename = "最牛逼的项目站";
             var siteurl = "https://bestmoneyone.github.io";
             regisFogUser(sitename,siteurl);
         }
@@ -420,12 +477,12 @@ Gridea 主页
 <!------ 根据自定义配置声明变量👇 --------------------->
     
     <script>
-        let postnumChoice = false
+        let postnumChoice = true
     </script>
     
     
     <script>
-        let shareChoice = false
+        let shareChoice = true
     </script>
     
     
@@ -487,7 +544,7 @@ Gridea 主页
     get();
 
     function get() {
-        var t = JSON.parse('[]');
+        var t = JSON.parse('[{"author":"说一说","img":"https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fpic1.win4000.com%2Fpic%2F2%2Fd9%2F301d843015.jpg&refer=http%3A%2F%2Fpic1.win4000.com&app=2002&size=f9999,10000&q=a80&n=0&g=0n&fmt=jpeg?sec=1635064742&t=77bd904febf4691aa2e16041cbc3ccf1","text":"今天心情很好","time":"今天"}]');
         talkindex = t.length - 1;
         for (var i = 0; i <= t.length - 1; i++) {
             var d = {};
@@ -931,6 +988,8 @@ menulist.eq(i).show();
                 <div id="pl" style="display:none">https://bestmoneyone.github.io/post/处女作/</div>
                 <div id="rootaddr" style="display:none">https://bestmoneyone.github.io</div>
                 
+                    
+                
             </div>
             <div class="text ">
                 <p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
@@ -967,13 +1026,32 @@ menulist.eq(i).show();
             
             <div class="postfooter">
                 <ul class="post-copyright">
-                    <li><strong>文章作者：</strong></li>
+                    <li><strong>文章作者：</strong>牛逼哥</li>
             <li><strong>原文链接：</strong>https://bestmoneyone.github.io/post/处女作/</li>
             <li><strong>版权声明：</strong>本博客所有文章除特别声明外，均采用<i class="fa fa-fw fa-creative-commons"></i>BY-NC-SA
                 许可协议。转载请注明出处！</li>
             </ul>
         </div>
         
+            <div class="shareContainer">
+                <div class="share" style="height:30px;background: white;">
+                    <a class="qq" href=""><i><img class="shareicon"
+                                src="https://bestmoneyone.github.io/media/images/qqs.png" alt=""></i></a>
+                    <a class="wechat" href=""><i><img class="shareicon"
+                                src="https://bestmoneyone.github.io/media/images/wechats.png" alt=""></i></a>
+                    <a class="weibo" href=""><i><img class="shareicon"
+                                src="https://bestmoneyone.github.io/media/images/weibos.png" alt=""></i></a>
+                    <a class="qzone" href=""><i><img class="shareicon"
+                                src="https://bestmoneyone.github.io/media/images/qzones.png" alt=""></i></a>
+                    <a class="douban" href=""><i><img class="shareicon"
+                                src="https://bestmoneyone.github.io/media/images/doubans.png" alt=""></i></a>
+                    <a class="facebook" href=""><i><img class="shareicon"
+                                src="https://bestmoneyone.github.io/media/images/facebooks.png" alt=""></i></a>
+                    <a class="twitter" href=""><i><img class="shareicon"
+                                src="https://bestmoneyone.github.io/media/images/twitter.png" alt=""></i></a>
+                </div>
+            </div>
+            
         <div id="otherpost">
             
             
@@ -1035,10 +1113,10 @@ menulist.eq(i).show();
     
 
     <!-- 背景图加载方式👇 -->
-    <div id="bgchoice" style="display: none">default
+    <div id="bgchoice" style="display: none">link
                 </div>
                 
-                <div id="bgurl" style="display:none">/media/images/bgimg.png</div>
+                <div id="bgurl" style="display:none">https://gimg2.baidu.com/image_search/src=http%3A%2F%2Fimg5.51tietu.net%2Fpic%2F2019-082211%2Fa1cay32mmf2a1cay32mmf2.jpg&amp;refer=http%3A%2F%2Fimg5.51tietu.net&amp;app=2002&amp;size=f9999,10000&amp;q=a80&amp;n=0&amp;g=0n&amp;fmt=jpeg?sec=1635064685&amp;t=eb75b36ff0274e25757dd16dbdc893ab</div>
                 
     <!-- 背景图加载方式👆 -->
 </body>
@@ -1099,7 +1177,7 @@ menulist.eq(i).show();
 
 <!------------ 加载全局背景图功能👇（开始时没有写好，这功能有点鸡肋/(ㄒoㄒ)/~~） -->
 <script>
-    var bgchoice = "default"
+    var bgchoice = "link"
     var bg = $('#bg');
     var bgurl = document.getElementById("bgurl").innerHTML;
     if (bgchoice == 'default')
