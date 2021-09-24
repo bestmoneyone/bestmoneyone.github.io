@@ -3229,38 +3229,19 @@ a {
 }
 
       .posttitlewithoutimg {
-        color: #fa5252;
+        color: #1c7ed6;
       }
     
       .sitename {
-        color: #fab005;
+        color: #212529;
       }
     
         .describtion {
           color: #343a40;
         }
       
-        .menubutton {
-          color: #868e96;
-        }
-
-        .menucontainer span::before,
-        .menucontainer span::after {
-          color:#868e96;
-          content: attr(data-text);
-          position: absolute;
-          top: -0.5em;
-          left: 0;
-          width: 100%;
-          transition: 0.3s ease-out;
-        }
-
-        .menubutton:visited{
-          color: #868e96;
-        }
-      
         .posttitle {
-          color: #495057;
+          color: #fd7e14;
         }
       
         #sitegotimeDate,#sitegotimes,#footinfo,#footinfo a{
