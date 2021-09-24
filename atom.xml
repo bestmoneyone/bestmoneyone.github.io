@@ -2,7 +2,7 @@
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://bestmoneyone.github.io</id>
     <title>BestMoneyOne</title>
-    <updated>2021-09-24T07:41:24.023Z</updated>
+    <updated>2021-09-24T07:58:57.677Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://bestmoneyone.github.io"/>
     <link rel="self" href="https://bestmoneyone.github.io/atom.xml"/>
@@ -12,8 +12,8 @@
     <rights>All rights reserved 2021, BestMoneyOne</rights>
     <entry>
         <title type="html"><![CDATA[Hello Gridea]]></title>
-        <id>https://bestmoneyone.github.io/post/hello-gridea/</id>
-        <link href="https://bestmoneyone.github.io/post/hello-gridea/">
+        <id>https://bestmoneyone.github.io/post/处女作/</id>
+        <link href="https://bestmoneyone.github.io/post/处女作/">
         </link>
         <updated>2018-12-11T16:00:00.000Z</updated>
         <summary type="html"><![CDATA[<p>👏  欢迎使用 <strong>Gridea</strong> ！<br>
